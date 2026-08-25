@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dontwordle-assistant"
+version = "1.0.0"
+description = "Interactive information-theoretic assistant for Don't Wordle"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=2"]
+
+[project.urls]
+Repository = "https://github.com/murfalo/dontwordle-assistant"
+
+[project.scripts]
+dontwordle = "dontwordle_assistant:main"
+
+[tool.setuptools]
+packages = ["dontwordle_assistant"]
+
+[tool.setuptools.package-data]
+dontwordle_assistant = ["data.npz"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4",
+    "pytest-cov>=6",
+    "ruff>=0.12",
+]
+
+[tool.coverage.report]
+fail_under = 80
+show_missing = true
+
+[tool.coverage.run]
+branch = true
+source = ["dontwordle_assistant"]
+
+[tool.pytest.ini_options]
+addopts = ["--cov", "--cov-branch", "--cov-report=term-missing", "--cov-report=xml"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["B", "D", "E", "F", "I", "NPY", "PERF", "RUF", "SIM", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["D", "SLF001"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"

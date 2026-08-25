@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 84" role="img" aria-label="Don't Wordle">
+  <g stroke="#3a3a3c" stroke-width="3">
+    <rect x="4" y="4" width="76" height="76" rx="8" fill="#787c7e"/>
+    <rect x="90" y="4" width="76" height="76" rx="8" fill="#c9b458"/>
+    <rect x="176" y="4" width="76" height="76" rx="8" fill="#787c7e"/>
+    <rect x="262" y="4" width="76" height="76" rx="8" fill="#3a3a3c"/>
+    <rect x="348" y="4" width="76" height="76" rx="8" fill="#6aaa64"/>
+  </g>
+  <g fill="white" font-family="Arial, sans-serif" font-size="42" font-weight="700" text-anchor="middle">
+    <text x="42" y="58">D</text>
+    <text x="128" y="58">O</text>
+    <text x="214" y="58">N</text>
+    <text x="300" y="58">'</text>
+    <text x="386" y="58">T</text>
+  </g>
+</svg>
